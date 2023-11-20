@@ -5,7 +5,19 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    children:[
+      {
+        path:'stream',
+        name:'stream',
+        component:() =>  import(/* webpackChunkName: "about" */ '../views/Stream.vue')
+      },
+      {
+        path:'drop',
+        name:'drop',
+        component: () => import(/* webpackChunkName: "about" */ '../views/DropZone.vue')
+      }
+    ]
   },
   {
     path: '/about',

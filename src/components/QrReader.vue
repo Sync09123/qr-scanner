@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 import { QrStream, QrCapture, QrDropzone } from "vue3-qr-reader";
 
 export default {
