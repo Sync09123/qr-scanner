@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>Scanner ni Jericho</div>
   <div>
     <router-link to="/stream" style="padding: 10px; font-weight: bold"
       >Stream
