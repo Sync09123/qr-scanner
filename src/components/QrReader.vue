@@ -1,40 +1,34 @@
 <template>
- <div class="stream">
-  <qr-stream @decode="onDecode" class="mb">
-    <div style="color: red;" class="frame"></div>
-  </qr-stream>
-</div>
-<div class="result">
-  Result: {{data}}
-</div>
+  <div class="stream">
+    <qr-stream @decode="onDecode" class="mb">
+      <div style="color: red" class="frame"></div>
+    </qr-stream>
+  </div>
+  <div class="result">Result: {{ qr }}</div>
 </template>
 
 <script>
-import { reactive } from 'vue';
-import { QrStream, QrCapture, QrDropzone } from 'vue3-qr-reader';
+import { reactive, ref } from "vue";
+import { QrStream, QrCapture, QrDropzone } from "vue3-qr-reader";
 
 export default {
-    components:{
-        QrStream,
+  components: {
+    QrStream,
     QrCapture,
-    QrDropzone
-},
-setup() {
-    const state = reactive({
-      data: null
-    })
-    function onDecode(data) {
-      state.data = data
-    }
+    QrDropzone,
+  },
+  setup() {
+    const qr = ref(null);
+    const onDecode = (data) => {
+      qr.data = data;
+    };
     return {
-      ...toRefs(state),
-      onDecode
-    }
-  }
-
-}
+      qr,
+      onDecode,
+    };
+  },
+};
 </script>
 
 <style>
-
 </style>
