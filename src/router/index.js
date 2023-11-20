@@ -16,6 +16,11 @@ const routes = [
         path:'drop',
         name:'drop',
         component: () => import(/* webpackChunkName: "about" */ '../views/DropZone.vue')
+      },
+      {
+        path:'upload',
+        name:'upload',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Upload.vue')
       }
     ]
   },
