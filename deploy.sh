@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to your Laravel project directory
-
+cd /home/soybean15/vue-projects/q-scanner/
 
 # Add all changes to the staging area
 git add .
