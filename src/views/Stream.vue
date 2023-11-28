@@ -4,11 +4,11 @@
       Qr Stream
     </div>
     <div class="center stream">
-      <!-- <qr-stream @decode="onDecode" class="mb">
+      <qr-stream @decode="onDecode" class="mb">
         <div style="color: red;" class="frame"></div>
-      </qr-stream> -->
+      </qr-stream>
 
-      <div @click="onDecode('6565ba3fce92e')" style="cursor: pointer;background-color: red;"> Click</div>
+      <!-- <div @click="onDecode('6565ba3fce92e')" style="cursor: pointer;background-color: red;"> Click</div> -->
     </div>
     <div class="result">
       Result: {{data}}
