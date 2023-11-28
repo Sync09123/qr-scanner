@@ -37,7 +37,7 @@ export default {
     watch(state,()=>{
 
       if(state.data){
-        router.push({name:'about'})
+        router.push({name:'details',params:{id:state.data}})
         console.log('not null')
 
       }

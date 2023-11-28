@@ -13,6 +13,11 @@ const routes = [
         component:() =>  import(/* webpackChunkName: "about" */ '../views/Stream.vue')
       },
       {
+        path:'details/:id',
+        name:'details',
+        component:() =>  import(/* webpackChunkName: "about" */ '../views/Details.vue')
+      },
+      {
         path:'drop',
         name:'drop',
         component: () => import(/* webpackChunkName: "about" */ '../views/DropZone.vue')
