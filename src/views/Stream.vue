@@ -4,9 +4,11 @@
       Qr Stream
     </div>
     <div class="center stream">
-      <qr-stream @decode="onDecode" class="mb">
+      <!-- <qr-stream @decode="onDecode" class="mb">
         <div style="color: red;" class="frame"></div>
-      </qr-stream>
+      </qr-stream> -->
+
+      <div @click="onDecode('test')" style="cursor: pointer;background-color: red;"> Click</div>
     </div>
     <div class="result">
       Result: {{data}}
@@ -15,10 +17,11 @@
 </template>
     
     <script>
-import { reactive, toRefs } from 'vue';
+import { reactive, toRefs, watch } from 'vue';
 
 // @ is an alias to /src
 import { QrStream } from 'vue3-qr-reader';
+import router from '@/router';
 
 export default {
   name: "HomeView",
@@ -30,6 +33,16 @@ export default {
     const  onDecode=(data) =>{
       state.data = data
     }
+
+    watch(state,()=>{
+
+      if(state.data){
+        router.push({name:'about'})
+        console.log('not null')
+
+      }
+
+    })
     return {
       ...toRefs(state),
       onDecode
