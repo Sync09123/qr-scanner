@@ -34,15 +34,24 @@ export default {
       state.data = data
     }
 
-    // watch(state,()=>{
+    watch(state,()=>{
 
-    //   if(state.data){
-    //     router.push({name:'details',params:{id:state.data}})
-    //     console.log('not null')
+      if(state.data){
+        const parts = state.data.split('/');
+        const lastElement = parts[parts.length - 1];
 
-    //   }
+        if(lastElement){
+          router.push({name:'details',params:{id:lastElement}})
 
-    // })
+        }else{
+          router.push({name:'details',params:{id:0}})
+
+        }
+
+       
+      }
+
+    })
     return {
       ...toRefs(state),
       onDecode
