@@ -34,15 +34,15 @@ export default {
       state.data = data
     }
 
-    watch(state,()=>{
+    // watch(state,()=>{
 
-      if(state.data){
-        router.push({name:'details',params:{id:state.data}})
-        console.log('not null')
+    //   if(state.data){
+    //     router.push({name:'details',params:{id:state.data}})
+    //     console.log('not null')
 
-      }
+    //   }
 
-    })
+    // })
     return {
       ...toRefs(state),
       onDecode
