@@ -1,17 +1,11 @@
 <template>
-  <div>Scanner ni Jericho</div>
-  <div>
+  <div class="title">Verify Document here</div>
+  <div style="padding-block:20px">
     <router-link to="/stream" style="padding: 10px; font-weight: bold"
-      >Stream
+      ><button class="btn green"> Scan QR </button>
     </router-link>
 
-    <router-link to="/drop" style="padding: 10px; font-weight: bold">
-      Drop Zone</router-link
-    >
-
-    <router-link to="/upload" style="padding: 10px; font-weight: bold">
-      Upload</router-link
-    >
+ 
   </div>
   <router-view />
 </template>
@@ -24,3 +18,20 @@ export default {
   components: {},
 };
 </script>
+
+<style scoped>
+.btn{
+  padding: 10px;
+  color: white;
+  
+}
+
+.green{
+  background-color: rgb(48, 197, 48);
+}
+.title{
+  font-size: 2em;
+  padding-block: 10px;
+  font-weight: bold;
+}
+</style>
