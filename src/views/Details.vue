@@ -1,6 +1,7 @@
 <template>
   <div  style="padding: 15px;">
-    <div v-if="data"> 
+   
+    <div v-if="data && data.length >0"> 
         <div class="flex-col " >
             <div  class="item">
                 <span ><strong>Date Requested :</strong> {{data[0].created_at}}</span>
@@ -53,6 +54,7 @@ export default {
             
         })
 
+        console.log('data',data.value)
 
         return{
             documents,
