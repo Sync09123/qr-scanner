@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb">
-      Qr Stream
+   
     </div>
     <div class="center stream">
       <qr-stream @decode="onDecode" class="mb">
@@ -10,9 +10,9 @@
 
       <!-- <div @click="onDecode('6565ba3fce92e')" style="cursor: pointer;background-color: red;"> Click</div> -->
     </div>
-    <div class="result">
+    <!-- <div class="result">
       Result: {{data}}
-    </div>
+    </div> -->
   </div>
 </template>
     
