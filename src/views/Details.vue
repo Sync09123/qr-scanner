@@ -19,9 +19,16 @@
                 <span ><strong>Document Type :</strong> {{data[0].document_type.name}}</span>
                
             </div>
+            <div  class="item">
+                <span ><strong>Prepared By :</strong> {{data[0].user.name}}</span>
+               
+            </div>
+
 
 
         </div>
+
+       
 
     </div>
     <div v-else>
