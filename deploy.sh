@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to your Laravel project directory
-cd /home/russ/capstoneproject/qr-scanner
+cd /home/russ/capstoneproject/qr-scanner/
 
 # Add all changes to the staging area
 git add .
